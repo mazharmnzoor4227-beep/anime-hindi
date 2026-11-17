@@ -22,6 +22,104 @@
             android:layout_marginBottom="8dp"
             android:orientation="vertical">
 
+            <!-- Hindi Anime: in-player audio language + quality filter -->
+            <LinearLayout
+                android:id="@+id/player_lang_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+                <TextView
+                    android:id="@+id/player_lang_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/textColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/player_lang_hi"
+                        style="@style/BlackButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hindi Dub" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/player_lang_en"
+                        style="@style/BlackButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="English" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/player_lang_ja"
+                        style="@style/BlackButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Japanese" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Quality"
+                    android:textColor="?attr/textColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/quality_filter_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/quality_filter_all"
+                        style="@style/ChipFilled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:text="All" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/quality_filter_1080"
+                        style="@style/ChipFilled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="1080p" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/quality_filter_720"
+                        style="@style/ChipFilled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="720p" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/quality_filter_480"
+                        style="@style/ChipFilled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="480p" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/profiles_click_settings"
                 android:layout_width="match_parent"
